@@ -19,10 +19,12 @@ export const verifyAuth = async (token: string) => {
   try {
     const verified = await jwtVerify(
       token,
-      new TextEncoder().encode(getJwtSecretKey())
+      new TextEncoder().encode(getJwtSecretKey()),
+      { clockTolerance: 120 } // Allow 2 minutes of clock skew
     );
     return verified.payload as unknown as UserJwtPayload;
   } catch (err) {
+    console.error("JWT Verification failed:", err);
     throw new Error("Your token has expired or is invalid.");
   }
 };

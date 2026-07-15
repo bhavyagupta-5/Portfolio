@@ -16,6 +16,7 @@ export async function middleware(request: NextRequest) {
       await verifyAuth(token);
       return NextResponse.next();
     } catch (err) {
+      console.error("Middleware Auth Error:", err);
       return NextResponse.redirect(new URL("/admin/login", request.url));
     }
   }
