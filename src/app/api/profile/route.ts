@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import { Profile } from "@/models/Profile";
 
+import { checkAuth } from "@/lib/serverAuth";
+
 export async function GET() {
   await dbConnect();
   const profile = await Profile.findOne().lean();
@@ -10,6 +12,9 @@ export async function GET() {
 
 export async function PUT(req: Request) {
   try {
+    const isAuthenticated = await checkAuth();
+    if (!isAuthenticated) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
     const data = await req.json();
     await dbConnect();
 
