@@ -25,9 +25,9 @@ export async function POST(req: Request) {
     const message = await ContactMessage.create(validatedData);
 
     return NextResponse.json({ success: true, message }, { status: 201 });
-  } catch (error) {
+  } catch (error: any) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ error: error.errors }, { status: 400 });
+      return NextResponse.json({ error: (error as any).errors }, { status: 400 });
     }
     return NextResponse.json({ error: "Failed to submit message" }, { status: 500 });
   }
