@@ -11,6 +11,7 @@ export default function AdminProfile() {
     name: "",
     title: "",
     careerObjective: "",
+    resumeUrl: "",
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -25,6 +26,7 @@ export default function AdminProfile() {
             name: data.name || "",
             title: data.title || "",
             careerObjective: data.careerObjective || "",
+            resumeUrl: data.resumeUrl || "",
           });
         }
         setLoading(false);
@@ -110,6 +112,20 @@ export default function AdminProfile() {
             rows={5}
             className="flex w-full rounded-md border border-border bg-background/50 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="resumeUrl">Resume URL (Link to Google Drive, Dropbox, etc.)</Label>
+          <Input
+            id="resumeUrl"
+            value={profile.resumeUrl}
+            onChange={(e) => setProfile({ ...profile, resumeUrl: e.target.value })}
+            placeholder="e.g. https://drive.google.com/file/d/..."
+            className="bg-background/50"
+          />
+          <p className="text-xs text-muted-foreground mt-1">
+            If left blank, it will try to load `public/resume.pdf` from your repository.
+          </p>
         </div>
 
         {message && (

@@ -21,6 +21,7 @@ export async function PUT(req: Request) {
       profile.name = data.name;
       profile.title = data.title;
       profile.careerObjective = data.careerObjective;
+      if (data.resumeUrl !== undefined) profile.resumeUrl = data.resumeUrl;
     }
     
     await profile.save();
