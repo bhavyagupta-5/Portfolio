@@ -22,6 +22,15 @@ export function Footer() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
+            href="https://leetcode.com/bhavyagupta5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-full transition-colors"
+          >
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.939 5.939 0 0 0 1.271 1.541l5.967 5.68c.8.705 2.072.705 2.872 0l.02-.019a2.05 2.05 0 0 0 .004-2.735l-.014-.015-3.92-3.733-1.87-1.782a1.31 1.31 0 0 1-.365-.705 1.3 1.3 0 0 1 .129-.861 1.316 1.316 0 0 1 .741-.661 1.325 1.325 0 0 1 .907.039l6.19 2.046c.801.264 1.69-.138 1.947-.942l.024-.076a1.996 1.996 0 0 0-.616-2.128l-.023-.017-5.968-5.68a1.298 1.298 0 0 1-.361-.741 1.292 1.292 0 0 1 .151-.884 1.31 1.31 0 0 1 .763-.615 1.332 1.332 0 0 1 .927.086l4.135 1.921c.8.372 1.765-.008 2.1-.822l.02-.05a1.996 1.996 0 0 0-.74-2.22l-.022-.014L14.444.438A1.374 1.374 0 0 0 13.483 0zm0 0"/></svg>
+            <span className="sr-only">LeetCode</span>
+          </a>
+          <a
             href="https://linkedin.com/in/bhavya-gupta5"
             target="_blank"
             rel="noopener noreferrer"
