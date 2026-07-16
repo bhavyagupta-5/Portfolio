@@ -3,5 +3,5 @@
 Welcome to my personal developer portfolio!
 
 # Live Demo
-You can view the live portfolio here: [Portfolio:(https://bhavyagupta-portfolio.vercel.app/)]
+You can view the live portfolio here: https://bhavyagupta-portfolio.vercel.app/
 
