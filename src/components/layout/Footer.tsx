@@ -22,7 +22,7 @@ export function Footer() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="https://leetcode.com/bhavyagupta5"
+            href="https://leetcode.com/u/bhavyagupta-5/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-full transition-colors"
