@@ -114,7 +114,7 @@ export default function AdminProfile() {
           />
         </div>
 
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <Label htmlFor="resumeUrl">Resume URL (Link to Google Drive, Dropbox, etc.)</Label>
           <Input
             id="resumeUrl"
@@ -126,7 +126,7 @@ export default function AdminProfile() {
           <p className="text-xs text-muted-foreground mt-1">
             If left blank, it will try to load `public/resume.pdf` from your repository.
           </p>
-        </div>
+        </div> */}
 
         {message && (
           <div className={`p-3 rounded-md text-sm ${message.includes("success") ? "bg-green-500/10 text-green-400 border border-green-500/20" : "bg-red-500/10 text-red-400 border border-red-500/20"}`}>

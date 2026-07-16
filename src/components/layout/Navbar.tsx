@@ -30,9 +30,9 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button variant="outline" asChild className="ml-4 font-mono text-xs">
+          {/* <Button variant="outline" asChild className="ml-4 font-mono text-xs">
             <Link href="/resume">Resume</Link>
-          </Button>
+          </Button> */}
         </nav>
         <button
           className="md:hidden p-2 text-foreground"
@@ -54,9 +54,9 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button variant="outline" asChild className="w-full justify-center font-mono text-xs">
+          {/* <Button variant="outline" asChild className="w-full justify-center font-mono text-xs">
             <Link href="/resume">Resume</Link>
-          </Button>
+          </Button> */}
         </div>
       )}
     </header>
