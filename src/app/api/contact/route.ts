@@ -27,8 +27,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, message }, { status: 201 });
   } catch (error: any) {
     if (error instanceof z.ZodError) {
+      console.error("Zod Validation Error:", error.errors);
       return NextResponse.json({ error: (error as any).errors }, { status: 400 });
     }
-    return NextResponse.json({ error: "Failed to submit message" }, { status: 500 });
+    console.error("Contact Form Error:", error);
+    return NextResponse.json({ error: "Failed to submit message", details: error?.message || error }, { status: 500 });
   }
 }
